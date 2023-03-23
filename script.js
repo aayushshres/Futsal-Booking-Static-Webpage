@@ -6,6 +6,9 @@ let formClose = document.querySelector('#form-close');
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 let videoBtn = document.querySelectorAll('.vid-btn');
+let profileBtn = document.querySelector('#profile-btn');
+let profileContainer = document.querySelector('.container');
+let profileClose = document.querySelector('#profile-close');
 
 window.onscroll = () =>{
     searchBtn.classList.remove('fa-times');
@@ -13,6 +16,7 @@ window.onscroll = () =>{
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
     loginForm.classList.remove('active');
+    profileContainer.classList.remove('active');
 }
 
 menu.addEventListener('click', () =>{
@@ -31,6 +35,14 @@ formBtn.addEventListener('click', () =>{
 
 formClose.addEventListener('click', () =>{
     loginForm.classList.remove('active');
+});
+
+profileBtn.addEventListener('click', () =>{
+    profileContainer.classList.add('active');
+});
+
+profileClose.addEventListener('click', () =>{
+    profileContainer.classList.remove('active');
 });
 
 videoBtn.forEach(btn =>{
